@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sales</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Chart.js for sales charts -->
+    <link rel="stylesheet" href="css/sales.css">
+ 
+<body>
+
+<!-- Navbar -->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+            <!-- Logo and Home icon -->
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-home"></i>
+            </a>
+            
+            <h1>SALES</h1>
+            
+            <!-- Navbar Menu Items -->
+                <ul class="navbar-nav ms-auto"> 
+                    
+                    <!-- Log out icon -->
+                    <li class="nav-item">
+                        <a class="nav-link logout-btn" href="#" id="logoutBtn">
+                            <i class="fas fa-sign-out-alt"></i> 
+                        </a>
+                    </li>
+                </ul>
+            
+        </div>
+    </nav>
+  
+
+    
+    <div class="table-container bg-white p-3">
+    
+        
+
+        <input type="date" id="dateFilter" class="form-control form-control-sm"> 
+        <table class="table  table-no-border text-center">
+            <thead class="table">
+                <tr>
+                    <th>
+                        Date
+                    </th>
+                    <th>Bill</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <!-- Accordion Trigger for Referral Number -->
+                                 
+                                <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#ref1" aria-expanded="false" aria-controls="ref1">
+                                    <span class="datetime">
+                                </button>
+                                
+                        
+                              
+                                <!-- Accordion -->
+                                <div class="accordion">
+                                    <div class="collapse" id="ref1" data-bs-parent="#refGroup1">
+                                        <div class="card card-body">
+                                            <!-- Clickable Span to Open Modal -->
+                                            <span class="random" data-bs-toggle="modal" data-bs-target="#receiptModal">
+                                                REF1234569099999998
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="Price">$500</td>
+                            <td><button class="btn btn-secondary" onclick="printTable()">Print</button></td>
+                        </tr>
+                   </tbody>
+                </table>
+    </div>
+
+    
+<!-- Receipt Modal -->
+<div class="modal fade" id="receiptModal" tabindex="-1" aria-labelledby="receiptModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="receiptModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Restaurant Details -->
+                <h5 class="text-center">Your Restaurant Name</h5>
+                <p class="text-center">123 Main Street, City, Country</p>
+                <p class="text-center">Phone: (123) 456-7890</p>
+                <hr>
+
+                <div class="receipt-info">
+                    <p><strong>Receipt No:</strong> REF1234569099999998</p>
+                    <p><strong>Date:</strong> Feb 7, 2025</p>
+                </div>
+                
+                
+
+                <!-- Receipt Table -->
+                <table class="table text-light">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Qty</th>
+                            <th>Price</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dish 1</td>
+                            <td>2</td>
+                            <td>$10.00</td>
+                            <td>$20.00</td>
+                        </tr>
+                        <tr>
+                            <td>Dish 2</td>
+                            <td>1</td>
+                            <td>$15.00</td>
+                            <td>$15.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr>
+
+                <!-- Payment Details -->
+                <div class="payment-details">
+                    <p>Subtotal: <span class="float-end">$35.00</span></p>
+                    <p>Service Charge (10%): <span class="float-end">$3.50</span></p>
+                    <p><strong>Total:</strong> <span class="float-end">$38.50</span></p>
+                    <p>Cash: <span class="float-end">$50.00</span></p>
+                    <p><strong>Change:</strong> <span class="float-end">$11.50</span></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="printReceipt()">Print</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+
+       
+        
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+<script src="js/sales.js"></script>
+
+</body>
+</html>
