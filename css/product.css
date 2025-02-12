@@ -1,0 +1,291 @@
+
+body {
+    background: #f4f7fc;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Navbar */
+  .navbar {
+    padding: 0.8rem;
+    background-color: #747272;
+    padding: 1px;
+    width: 100%;
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .fa-home {
+    color: #ffffff;
+    margin-right: 20px;
+  }
+  
+  h1 {
+    font-size: 25px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    color: #f4f7fc;
+    margin-top: 10px;
+    letter-spacing: 1px;
+  }
+  
+  
+   /* Make the logout icon appear to the right */
+   .navbar-nav {
+    margin-left: auto;
+  }
+  
+  .logout-btn {
+    font-size: 1.5rem;
+    color: #ffffff;
+  }
+  
+  .fa-sign-out-alt{
+    color: #ffffff;
+  }
+  
+
+.table th, .table td {
+    padding: 15px;
+    text-align: center;
+}
+
+.table th {
+    background-color: #7c7e80;
+    color: white;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+.section-title {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+
+.card-body {
+    font-size: 18px;
+}
+.table th, .table td {
+    text-align: center;
+}
+.table th {
+    cursor: pointer;
+}
+
+#productTable {
+    width: 100%; /* Ensures the table takes up the full width of its container */
+}
+
+.table-body {
+    display: block;
+    max-height: 400px; /* Set the desired height */
+    overflow-y: auto; /* Enables vertical scrolling */
+    width: 100%; /* Ensures the body takes up the full width */
+}
+
+/* Add hover effect to the table rows */
+#productTable tbody tr:hover {
+    background-color: #f1f1f1; /* Light gray background on hover */
+    cursor: pointer; /* Change cursor to pointer to indicate it's interactive */
+}
+
+
+thead, tbody tr {
+    display: table; /* Ensures table layout is maintained */
+    width: 100%;
+    table-layout: fixed; /* Optional: fixes the column widths */
+}
+
+thead th {
+    position: sticky; /* Keeps the header fixed at the top */
+    top: 0;
+    background-color: #fff; /* Optional: adds a background to the sticky header */
+    z-index: 1;
+}
+
+/* Center the content vertically in table cells */
+td {
+    vertical-align: middle; /* Aligns content to the middle of the cell */
+    text-align: center; /* Optionally center the content horizontally */
+    
+}
+
+
+
+/* Ensure the table is scrollable on small screens */
+.table-responsive {
+    overflow-x: auto; /* Allow horizontal scrolling */
+}
+
+.table {
+    width: 100%; /* Make sure the table takes the full width of the container */
+    margin-bottom: 1rem; /* Optional: Adds some space below the table */
+}
+
+
+/* Default style for buttons on larger screens */
+.btn-group {
+    display: flex; /* Display buttons in a row by default */
+    gap: 5px; /* Space between buttons */
+}
+
+.btn-group .btn {
+    
+       
+       
+        border-radius: 0 !important; /* Removes rounded corners */
+    
+        
+}
+
+
+
+
+/* ✅ Navbar Responsiveness */
+@media (max-width: 768px) { /* Tablets and smaller devices */
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .navbar-brand {
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .fa-home {
+        font-size: 22px;
+        margin-right: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-top: 5px;
+    }
+
+    .logout-btn {
+        font-size: 20px;
+    }
+}
+
+/* ✅ Responsive Table */
+@media (max-width: 1024px) { /* Laptops */
+    .table th, .table td {
+        padding: 10px; /* Reduce padding */
+        font-size: 14px; /* Adjust font size */
+    }
+}
+
+@media (max-width: 768px) { /* Tablets */
+    .table-body {
+        max-height: 300px; /* Reduce height */
+    }
+
+    .table th, .table td {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 576px) { /* Mobile Phones */
+    .table th, .table td {
+        padding: 8px;
+        font-size: 10px;
+    }
+
+    .table td{
+        font-size: 9px;
+    }
+
+    .btn-group .btn {
+        font-size: 6px;
+    }
+
+    .table-body {
+        max-height: 250px; /* Adjust scrolling height */
+    }
+
+    thead th {
+        font-size: 12px; /* Reduce header font size */
+    }
+}
+
+/* ✅ Responsive Buttons */
+@media (max-width: 768px) { /* Tablets */
+    .btn-group {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center;
+    }
+}
+
+@media (max-width: 576px) { /* Mobile Phones */
+    .btn-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* More spacing */
+    }
+}
+
+/* 🌍 General Styling */
+.d-flex {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* 🖥️ Default (Laptops & Desktops) */
+@media (min-width: 1025px) {
+    .d-flex {
+        justify-content: end;
+    }
+    .position-relative {
+        margin-left: 10px;
+    }
+}
+
+/* 📱 Tablets */
+@media (max-width: 1024px) {
+    .d-flex {
+        justify-content: center; /* Center elements */
+        gap: 10px;
+    }
+
+    .position-relative {
+        width: auto;
+        text-align: center;
+    }
+}
+
+/* 📱 Mobile */
+@media (max-width: 576px) {
+    .d-flex {
+        flex-direction: column; /* Stack elements */
+        align-items: center; /* Center elements */
+        width: 100%;
+        gap: 10px;
+    }
+
+    .position-relative {
+        width: 100%; /* Full width */
+    }
+
+    select.form-control, 
+    input.form-control {
+        width: 100% !important; /* Full width on small screens */
+        text-align: left;
+        padding-right: 35px; /* Prevents text overlap with icon */
+    }
+
+    /* Adjust icons inside input/select */
+    .position-relative i {
+        right: 10px; /* Adjust icon position */
+    }
+}

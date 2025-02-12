@@ -1,0 +1,298 @@
+body {
+  background: #f4f7fc;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  padding: 0.8rem;
+  background-color: #747272;
+  padding: 1px;
+  width: 100%;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.fa-home {
+  color: #ffffff;
+  margin-right: 20px;
+}
+
+h1 {
+  font-size: 25px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  color: #f4f7fc;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+
+
+ /* Make the logout icon appear to the right */
+ .navbar-nav {
+  margin-left: auto;
+}
+
+.logout-btn {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.fa-sign-out-alt{
+  color: #ffffff;
+}
+
+#myTabs{
+  margin-top: -10px;
+  margin-left: 10px;
+}
+
+#addCardBtn {
+  width: 15%;
+  font-size: 15px;
+  padding: 8px;
+  align-items: center;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Custom Styling for Active Tab Link */
+.nav-link.active {
+  color: #747272 !important; /* White text color */
+  border-radius: 5px; /* Optional: rounded corners for the active tab */
+}
+.nav-link{
+  color: #747272;
+
+}
+.nav-link:hover {
+  color: inherit; /* Keep the same text color when hovering */
+  background-color: transparent; /* Remove any background color change on hover */
+  border-color: transparent; /* Remove any border color change on hover */
+}
+
+.nav-tabs .nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #9a9da0;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Smooth transition when switching from tab text to input */
+.nav-tabs .nav-item .tab-text {
+  display: inline-block;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: -2px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.nav-item input {
+  padding: 0;  /* Reduce padding to make it smaller */
+  font-size: 14px;   /* Adjust font size for a compact look */
+  
+}
+
+/* Style the input field when renaming a tab */
+.nav-tabs .nav-item input {
+  width: 100px; /* Adjust width */
+  border-radius: 5px;
+  font-size: 15px;
+  outline: none;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+/* Cards Container */
+#cardContainer {
+  align-items: center;
+  justify-content: center;
+  
+}
+
+/* Cards Styling */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  width: 100%;
+  max-width: 50%;
+  cursor: pointer;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+  
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-body {
+  text-align: center;
+  padding: 20px;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Grid Styling */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-md-3 {
+  flex: 1 1 30%;
+  max-width: 30%;
+  min-width: 200px;
+}
+
+
+
+
+/* Modal Responsiveness */
+.modal-content {
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1024px) { /* Laptops */
+  .modal-dialog {
+      max-width: 50%;
+  }
+
+  .col-md-3 {
+      flex: 1 1 30%;
+      max-width: 30%;
+  }
+}
+
+@media (max-width: 768px) { /* Tablets */
+  .modal-dialog {
+      max-width: 70%;
+  }
+
+  .col-md-3 {
+      flex: 1 1 30%;
+      max-width: 30%;
+  }
+
+  #cardContainer {
+      margin-left: 0;
+      width: 100%;
+      justify-content: center;
+  }
+
+  .card-title {
+      font-size: 12px;
+      vertical-align: middle;
+  }
+
+  #addCardBtn {
+    width: 15%;
+    font-size: 12px;
+    padding: 8px;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    margin: 0 auto; /* Ensures centering */
+}
+
+}
+
+@media (max-width: 576px) { /* Mobile */
+  .modal-dialog {
+      max-width: 90%;
+  }
+
+  .col-md-3 {
+      flex: 1 1 100%;
+      max-width: 100%;
+  }
+
+  .card {
+      max-width: 90%;
+      margin: 10px auto;
+      margin-bottom: -15px;
+  }
+
+  #addCardBtn {
+      width: 30%;
+      font-size: 12px;
+      padding: 8px;
+      align-items: center;
+      margin: 0 auto;
+      display: block;
+  }
+}
+
+/* Navbar for small screens */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      text-align: center;
+      padding: 10px;
+  }
+
+  .navbar-brand {
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .fa-home {
+      font-size: 22px;
+      margin-right: 10px;
+  }
+
+  h1 {
+      font-size: 20px;
+      margin-top: 5px;
+  }
+
+  .logout-btn {
+      font-size: 20px;
+  }
+}
+
+/* Tab Navigation */
+@media (max-width: 576px) {
+  .nav-tabs {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      white-space: nowrap;
+  }
+
+  .nav-item {
+      flex-grow: 1;
+      text-align: center;
+  }
+
+  .nav-tabs .nav-link {
+      font-size: 14px;
+      padding: 6px 8px;
+  }
+
+  #add-tab {
+      font-size: 16px;
+      padding: 5px 8px;
+  }
+}

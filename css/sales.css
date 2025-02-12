@@ -1,0 +1,327 @@
+
+
+body {
+    background: #f4f7fc;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Navbar */
+  .navbar {
+    padding: 0.8rem;
+    background-color: #747272;
+    padding: 1px;
+    width: 100%;
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .fa-home {
+    color: #ffffff;
+    margin-right: 20px;
+  }
+  
+  h1 {
+    font-size: 25px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    color: #f4f7fc;
+    margin-top: 10px;
+    letter-spacing: 1px;
+  }
+  
+  
+   /* Make the logout icon appear to the right */
+   .navbar-nav {
+    margin-left: auto;
+  }
+  
+  .logout-btn {
+    font-size: 1.5rem;
+    color: #ffffff;
+  }
+  
+  .fa-sign-out-alt{
+    color: #ffffff;
+  }
+  
+  .card{
+    background-color: #ffffff;
+    border: none;
+    color: #747272;
+  }
+
+  .datetime {
+    display: block;  /* Ensures the date appears on a new line */
+    font-size: 14px;  /* Adjusts the text size */
+    color: #6c757d;  /* Bootstrap's gray color for a subtle look */
+    font-weight: 500;  /* Slightly bold for readability */
+    vertical-align: middle !important; /* Keeps elements centered */
+  
+}    
+    /* Ensure table maintains structure */
+    
+.table {
+    table-layout: fixed; /* Prevents columns from shifting */
+    width: 100%; /* Ensures full-width layout */
+}
+
+/* Keep TD content aligned and prevent movement */
+td {
+    vertical-align: middle !important; /* Keeps elements centered */
+    white-space: nowrap; /* Prevents wrapping */
+    color: #747272;
+}
+
+
+
+/* Style the price column */
+.Price {
+    text-align: center; /* Keeps it properly aligned */
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Keep the print button centered */
+.btn-secondary {
+    display: block;
+    width: 100px; /* Ensures fixed width */
+    margin: auto; /* Centers button */
+    text-align: center;
+}
+
+
+/* Style the date input to align properly */
+#dateFilter {
+    display: inline-block;
+    width: 150px; /* Adjust width as needed */
+    font-size: 14px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #747272;
+    margin-left: 80%;
+    margin-bottom: 10px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+/* Hover & Focus Effects */
+#dateFilter:hover,
+#dateFilter:focus {
+    border-color: #0d6efd; /* Bootstrap primary color */
+}
+
+    
+
+    .bill{
+        text-align: center;
+    }
+  
+    .btn-link{
+        text-decoration: none;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .random{
+        color: rgb(0, 128, 255);
+        margin-left: -4px;
+        font-size: 13px;
+        margin-top: -10px;
+    }
+    
+    .table-container {
+                max-width: 800px;
+                margin: 50px auto;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+                overflow: hidden;
+    }
+    .table-no-border td, .table-no-border th, .table-no-border {
+                border: none !important;
+    }
+    thead.table {
+        color: #ffffff; /* Text color for contrast */
+    }
+    .table thead {
+        background-color: #7c7e80;
+        font-size: 12px;
+    }
+    .table tbody tr:hover {
+        background-color: #ffffff;
+        cursor: pointer;
+    }
+    .table th, .table td {
+        vertical-align: middle;
+        font-size: 14px;
+       
+        
+    }
+
+    .modal-header {
+        border-bottom: none !important; /* Removes the default Bootstrap border */
+      
+    }
+    
+    .payment-details p {
+        font-size: 1rem;
+        margin: 2px 0;
+        color: #4d4d4d;
+    }
+    
+    .payment-details span {
+        font-weight: bold;
+        color: #4d4d4d;
+    }
+
+    /* Receipt Number & Date */
+.receipt-info {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    padding-bottom: 15px;
+}
+
+.receipt-info p {
+    margin: 0;
+    color: #333;
+}
+
+/* * 📱 Tablets & Small Laptops (768px - 1023px) */ 
+@media screen and (max-width: 1023px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    #dateFilter {
+        margin-left: 75%;
+        width: 140px;
+    }
+
+    .table th, .table td {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .btn-group {
+        flex-wrap: wrap;
+    }
+
+    
+
+    .receipt-info {
+        font-size: 14px;
+    }
+    .table-container {
+        width: 80%;
+        overflow-x: auto;
+    }
+
+}
+
+/* 📱 Mobile (Up to 767px) */
+@media screen and (max-width: 767px) {
+    .navbar {
+        padding: 8px;
+    }
+
+   
+    h1 {
+        font-size: 20px;
+        margin-top: 5px;
+    }
+
+    .navbar-brand {
+        font-size: 16px;
+    }
+
+    
+
+    .table-container {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .table {
+        font-size: 12px;
+    }
+
+    .table th, .table td {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    #dateFilter {
+        width: 100%;
+        margin-left: 0;
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .btn-group .btn {
+        width: 90%;
+    }
+
+    .receipt-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .datetime {
+        font-size: 12px;
+    }
+}
+
+/* 📱 Small Mobile (Up to 480px) */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 18px;
+    }
+
+    .datetime {
+        font-size: 9px; 
+        margin-left: -20px;
+        
+    }
+
+    .navbar {
+        padding: 5px;
+    }
+
+    .table {
+        font-size: 11px;
+    }
+
+    .table th, .table td {
+        padding: 6px;
+    }
+
+    .btn{
+        font-size: 10px;
+        padding-left: -10px;
+    }
+
+    .random{
+       
+        margin-left: -23px;
+        font-size: 9px;
+        margin-top: -10px;
+    }
+    
+}
