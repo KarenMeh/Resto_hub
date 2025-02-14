@@ -1,0 +1,110 @@
+body {
+    background: #f4f7fc;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Navbar */
+  .navbar {
+    padding: 0.8rem;
+    background-color: #747272;
+    padding: 1px;
+    width: 100%;
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .fa-home {
+    color: #ffffff;
+    margin-right: 20px;
+  }
+  
+  h1 {
+    font-size: 25px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    color: #f4f7fc;
+    margin-top: 10px;
+    letter-spacing: 1px;
+  }
+  
+  
+   /* Make the logout icon appear to the right */
+   .navbar-nav {
+    margin-left: auto;
+  }
+  
+  .logout-btn {
+    font-size: 1.5rem;
+    color: #ffffff;
+  }
+  
+  .fa-sign-out-alt{
+    color: #ffffff;
+  }
+  
+
+/* Employee Card Styling */
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+
+.card-header {
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #747272;
+  text-transform:uppercase;
+  letter-spacing: 1px;
+}
+
+/* Employee List Styling */
+.list-group-item {
+  cursor: pointer;
+}
+
+.list-group-item:hover {
+  background-color: #e9ecef;
+}
+
+/* Modal Styling */
+.modal-header {
+  background-color:#747272;
+  color: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.modal-body h5 {
+  margin-bottom: 15px;
+}
+
+/* Form Styling */
+.form-label {
+
+}
+
+/* Checkbox Customization */
+.form-check-input:checked {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.form-check-label {
+
+}
+
+/* Save Button */
+.btn-success {
+  background-color: #28a745;
+  border: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
