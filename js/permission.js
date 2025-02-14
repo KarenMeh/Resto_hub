@@ -1,13 +1,24 @@
-function openModal(employeeName) {
-    document.getElementById("employeeName").innerText = "Modify Permissions for " + employeeName;
-    document.getElementById("passcode").value = "";
-    document.getElementById("cancelInvoice").checked = false;
-    document.getElementById("cancelOrder").checked = false;
-    document.getElementById("viewZReport").checked = false;
-    new bootstrap.Modal(document.getElementById("employeeModal")).show();
+function navigateToEdit(employeeName) {
+    const encodedName = encodeURIComponent(employeeName);
+    window.location.href = `edit_employee.html?name=${encodedName}`;
 }
+
 
 function saveEmployeeSettings() {
     alert("Permissions updated successfully!");
-    new bootstrap.Modal(document.getElementById("employeeModal")).hide();
 }
+
+function goBack() {
+    window.location.href = "permission_pages.html";
+}
+
+// Extract employee name from URL and display it
+function getEmployeeNameFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const employeeName = urlParams.get("name");
+    if (employeeName) {
+        document.getElementById("employeeName").innerText = "Modify Permissions for " + decodeURIComponent(employeeName);
+    }
+}
+
+getEmployeeNameFromURL();
